@@ -1,0 +1,149 @@
+html {
+    font-family: sans-serif;
+
+}
+
+.body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+
+}
+.shapka {
+    width: 100%;
+    height: 10%;
+    min-height: 20px;
+    max-height: 40px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+.vesChat{
+    min-width: 300px;
+    min-height: 600px;
+}
+.vesChat .allMessages{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid skyblue;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    height: 50%;
+    overflow-y: scroll;
+    min-height: 100px;
+    position: relative;
+    font-family: Monospace ;
+}
+
+.vesChat .allMessages .message {
+    display: inline-flex;
+    clear: both;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    /*max-height: 70px;*/
+    border: 2px solid rgba(131,201,228,0.38);
+    border-radius: 3px;
+   margin-bottom: 2px;
+    background-color: antiquewhite;
+}
+
+
+.vesChat .allMessages .message .messageText  {
+
+    padding: 5px;
+   /*height: 80%;*/
+
+    width: 100%;
+
+}
+
+.vesChat .allMessages .message .messageText  textarea{
+    background-color: antiquewhite;
+
+    border: none;
+    outline: none;
+    width: 100%;
+    /*height: 95%;*/
+    resize: none;
+    max-height: 150px;
+}
+
+
+.vesChat .allMessages .message .userInfo{
+    width: 15%;
+    max-width: 80px;
+    padding: 1%;
+}
+.vesChat .allMessages .message .userInfo .userNickname{
+    font-size: 16;
+    font-weight: bold;
+}
+.vesChat .allMessages .message .userInfo .messageTime{
+    font-size: 10;
+}
+
+.vesChat .userBlock {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: rgba(147,220,255,0.38);
+    height: 20%;
+    min-height: 120px;
+    overflow: visible;
+    bottom: 0px;
+    position: relative;
+}
+
+.vesChat .userBlock .userName {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 1%;
+    height: 30%;
+}
+
+.vesChat .userBlock .userMessageAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 1%;
+    height: 70%;
+}
+vesChat .userBlock .userMessageAndButton .label {
+    height: 10%;
+}
+.vesChat .userBlock .userMessageAndButton .userMessage{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+}
+.vesChat .userBlock .userMessageAndButton .userMessage .textarea {
+    width: 85%;
+}
+
+.vesChat .userBlock .userMessageAndButton .userMessage .sendButton {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vesChat .userBlock .userMessageAndButton .userMessage .textarea textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}

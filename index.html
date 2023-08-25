@@ -1,0 +1,137 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="/css/index.css" type="text/css">
+<link rel="stylesheet" href="/css/tabs.css" type="text/css">
+<link rel="stylesheet" href="/css/users.css" type="text/css">
+<link rel="stylesheet" href="/css/userBlock.css" type="text/css">
+<link rel="stylesheet" href="/css/allMessages.css" type="text/css">
+<link rel="stylesheet" href="/css/uploadFiles.css" type="text/css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+<title id="titleTOP">Super Chat</title>
+<body>
+
+<div class="shapka" id="shapka">
+    <ion-icon name="logo-twitter"></ion-icon>
+    <p>SUPER CHAT</p>
+    <ion-icon name="logo-nodejs"></ion-icon>
+</div>
+<div class='allTabs' id="allTabs">
+    <div class='tab' id="RoomTab0">
+        <div class="tabTittle" id="allMessagesTitle">Общий чат</div>
+    </div>
+
+</div>
+
+<div class="vesChat">
+
+    <div class='chatArea' id="chatArea">
+        <div class='users' id='users'>
+            <div class='usersTitle'>
+                <ion-icon class="usersLogo" name="people"></ion-icon>
+                <p>Users</p>
+            </div>
+
+            <div id='usersList'>
+
+            </div>
+        </div>
+        <div class="allMessages" id="msgAreaRoom0">
+            <!--                        <div class="message">-->
+            <!--                            <div class="userInfo">-->
+            <!--                                <div class="userNickname">Admin</div>-->
+            <!--                                <div class="messageTime">Hack</div>-->
+            <!--                            </div>-->
+            <!--                            <div class="messageText">-->
+            <!--                                <textarea>Приветствуем Вас в нашем ламповом чатике :)</textarea>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                <div class="sysMessage">-->
+            <!--                    <div class="sysMessageText"></div>-->
+            <!--                </div>-->
+        </div>
+
+    </div>
+
+    <div class="userBlock">
+        <div class="userNameAndUpload">
+            <div class="userName">
+            <input type="text" id="userNick" placeholder="Введите имя..." maxlength="10"/>
+        </div>
+
+            <div class="uploadArea" id="uploadArea">
+                <form
+                    class="form-upload"
+                    id="uploadForm2"
+                    method="post"
+                    enctype="multipart/form-data"
+            >
+                <!--                <label class="form-upload__label" for="uploadFormFile">-->
+                <span class="form-upload__title" id="uploadedFileName"></span>
+                    <div class="form-upload__container">
+                        <span class="form-upload__status" id="uploadForm_Status"></span>
+                        <span id="uploadForm_Size"></span>
+                    </div>
+                <input
+                        class="form-upload__input"
+                        id="uploadFormFile"
+                        type="file"
+                        name="photo"
+                        accept="image/*">
+
+                </label>
+                <input
+                        class="form-upload__submit"
+                        id="uploadForm_Submit"
+                        type="submit"
+                        value="Загрузить файл"
+                >
+                <progress id="progressBar" value="0" max="100"></progress>
+            </form>
+                <div class="sendFile" id="fileChooseBtn"><ion-icon name="attach-outline" class="skrepka"></ion-icon></div>
+
+            </div>
+        </div>
+        <div class="userMessageAndButton">
+            <div class="label">
+                <label></label>
+            </div>
+            <div class="userMessage">
+                <div class="textarea">
+                    <textarea id="messageInput" placeholder="Введите сообщение..."></textarea>
+                </div>
+                <div class="sendButton">
+
+                    <button id="sendMessage">
+                        <ion-icon name="send"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="serverStatus" class="serverStatus">
+        <div id="serverStatusText" class="serverStatusText">Сервер не отвечает!</div>
+        <div id="krug" class="krug"></div>
+        <div>
+            <ion-icon class="mute soundOn" id="mute" name="volume-high"></ion-icon>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>
+<script src="js/tabsManager.js"></script>
+<script src="js/clientAPI.js"></script>
+<script src="js/uploadFiles.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
